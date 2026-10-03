@@ -1,10 +1,3 @@
-# from unittest.mock import patch
-
-import pytest
-
-from app.main import can_access_google_page
-
-
 @pytest.mark.parametrize(
     "has_connection,is_valid_url,expected",
     [
@@ -27,4 +20,4 @@ def test_can_access_google_page(
         return_value=is_valid_url,
     ):
         result = can_access_google_page("https://www.google.com")
-        assert result == expected your code here
+        assert result == expected
